@@ -1,0 +1,41 @@
+# ── LiveKit Agents (open-source) ──────────────────────────────────────────────
+# Core framework for building real-time voice/video AI pipelines
+livekit-agents[openai]>=0.12.0
+
+# OpenAI plugin: provides STT (Whisper), LLM (gpt-4o-mini), TTS connectors
+livekit-plugins-openai>=0.10.0
+
+# Silero VAD: Voice Activity Detection — detects when the user starts/stops speaking
+livekit-plugins-silero>=0.6.0
+
+# ── RAG Pipeline ──────────────────────────────────────────────────────────────
+# Embedding + reranker models (ATE-2, CrossEncoder, etc.)
+sentence-transformers>=3.0.0
+
+# Local vector store
+chromadb>=0.5.0
+
+# BM25 sparse retrieval for hybrid search
+rank-bm25>=0.2.2
+
+# ── Web Scraping ───────────────────────────────────────────────────────────────
+# HTTP client for fetching bank website HTML (used for non-JS pages)
+requests>=2.31.0
+httpx>=0.27.0
+
+# HTML parser — extracts readable text from raw HTML
+beautifulsoup4>=4.12.0
+lxml>=5.1.0
+
+# Headless browser — renders JavaScript before scraping
+# After pip install, run: playwright install chromium
+playwright>=1.40.0
+
+# ── Utilities ─────────────────────────────────────────────────────────────────
+# Loads .env file into environment variables at runtime
+python-dotenv>=1.0.0
+
+# ── Optional MMS Voice Lab (standalone experiments) ───────────────────────────
+# Does NOT replace OpenAI STT/TTS in main agent unless you wire it manually.
+transformers>=4.44.0
+soundfile>=0.12.1

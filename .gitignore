@@ -1,0 +1,29 @@
+# ── Secrets — NEVER commit real keys ──────────────────────────────────────────
+.env
+
+# ── Python ─────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# ── Virtual environments ───────────────────────────────────────────────────────
+venv/
+.venv/
+env/
+.env/
+
+# ── Local model/browser caches (re-downloadable) ─────────────────────────────
+.hf_cache/
+.hf-cache/
+playwright-browsers/
+.playwright-browsers/
+ms-playwright/
+
+# ── OS / editor junk ──────────────────────────────────────────────────────────
+.DS_Store
+.idea/
+.vscode/
+*.swp
+.playwright-browsers/
