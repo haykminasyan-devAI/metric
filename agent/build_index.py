@@ -23,7 +23,7 @@ from chromadb.config import Settings
 from sentence_transformers import SentenceTransformer
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-BANK_DATA_DIR = os.getenv("BANK_DATA_DIR", os.path.join(BASE_DIR, "bank_data"))
+BANK_DATA_DIR = os.getenv("BANK_DATA_DIR", os.path.join(BASE_DIR, "bank_data_structured"))
 CHROMA_DIR = os.getenv("CHROMA_DIR", os.path.join(BASE_DIR, "chroma_db"))
 COLLECTION_NAME = "bank_data"
 MODEL_NAME = os.getenv("EMBEDDING_MODEL", "Metric-AI/armenian-text-embeddings-1")

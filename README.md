@@ -4,16 +4,7 @@ A real-time voice AI customer support agent for Armenian banks, built with the o
 
 **Supported banks:** Ameriabank, Armeconombank (AEB), Amio Bank, Fast Bank
 
----
 
-## Deliverables
-
-1. **GitHub Repository:** `<paste-your-github-repo-link-here>`
-2. **Documentation (`README.md`) includes:**
-   - Architecture and decisions (design, model choices, and trade-offs)
-   - Setup instructions (how to run and use)
-
----
 
 ## Architecture & Decisions
 
@@ -181,13 +172,18 @@ armenian-voice-agent/
 │   ├── main.py               # LiveKit agent entrypoint (selectable LLM)
 │   ├── prompts.py            # System prompt with guardrails (Armenian)
 │   ├── rag.py                # Dense retriever (ChromaDB only)
-│   └── build_index.py        # Builds ChromaDB index from bank_data/
-├── bank_data/                # Scraped & cleaned text files (one per bank)
+│   └── build_index.py        # Builds ChromaDB index from bank_data_structured/
+├── bank_data/                # Raw scraped text files (one per bank)
 │   ├── ameriabank.txt
 │   ├── aeb.txt
 │   ├── amio.txt
 │   └── fastbank.txt
-├── chroma_db/                # ChromaDB vector store (auto-generated)
+├── bank_data_structured/     # Cleaned & structured data used for RAG indexing
+│   ├── ameriabank.txt
+│   ├── aeb.txt
+│   ├── amio.txt
+│   └── fastbank.txt
+├── chroma_db/                # ChromaDB vector store (pre-built, included)
 ├── .env                      # Your API keys (never commit)
 ├── .env.example              # Template showing required keys
 ├── requirements.txt          # Python dependencies
